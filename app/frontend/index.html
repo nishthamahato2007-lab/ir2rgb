@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ir2rgb - Satellite Thermal-to-RGB Translation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-icon">🛰️</span>
+                <span class="logo-text">ir2rgb</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#demo">Demo</a></li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Thermal-to-RGB <span class="highlight">Image Translation</span></h1>
+            <p class="hero-subtitle">Transform Satellite Thermal Infrared Imagery into Rich RGB Scenes using Advanced AI</p>
+            <p class="hero-description">
+                Powered by Conditional GANs (Pix2Pix) • SIH 2026 Smart India Hackathon
+            </p>
+            <div class="hero-buttons">
+                <a href="#demo" class="btn btn-primary">Try Demo</a>
+                <a href="https://github.com/nishthamahato2007-lab/ir2rgb" class="btn btn-secondary">View on GitHub</a>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="floating-card card-1">
+                <span>Thermal IR</span>
+                <div class="image-placeholder thermal"></div>
+            </div>
+            <div class="floating-card card-2">
+                <span>RGB Output</span>
+                <div class="image-placeholder rgb"></div>
+            </div>
+            <div class="floating-card card-3">
+                <span>AI Powered</span>
+                <div class="ai-badge">✨ GAN</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <h2>Key Features</h2>
+        <div class="features-grid">
+            <div class="feature-card glassmorphic">
+                <div class="feature-icon">📡</div>
+                <h3>USGS Landsat Integration</h3>
+                <p>Automated radiometric calibration from raw Collection 2 Level-2 imagery to absolute Surface Temperature</p>
+            </div>
+
+            <div class="feature-card glassmorphic">
+                <div class="feature-icon">🗺️</div>
+                <h3>Geospatial Processing</h3>
+                <p>Native GeoTIFF support with CRS transformations and intelligent patch-based processing</p>
+            </div>
+
+            <div class="feature-card glassmorphic">
+                <div class="feature-icon">🧠</div>
+                <h3>cGAN Architecture</h3>
+                <p>Pix2Pix conditional GAN with U-Net generator and PatchGAN discriminator for high-quality synthesis</p>
+            </div>
+
+            <div class="feature-card glassmorphic">
+                <div class="feature-icon">⚡</div>
+                <h3>Multi-Loss Optimization</h3>
+                <p>Combined adversarial, L1 reconstruction, and perceptual losses for enhanced visual quality</p>
+            </div>
+
+            <div class="feature-card glassmorphic">
+                <div class="feature-icon">🎯</div>
+                <h3>Full-Scene Inference</h3>
+                <p>Sliding-window reconstruction with Gaussian blending for seamless large-scale GeoTIFF processing</p>
+            </div>
+
+            <div class="feature-card glassmorphic">
+                <div class="feature-icon">🎨</div>
+                <h3>Interactive Dashboard</h3>
+                <p>Glassmorphic web UI with dynamic before/after split slider for visual validation</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Demo Section -->
+    <section id="demo" class="demo">
+        <h2>Interactive Demo</h2>
+        <div class="demo-container glassmorphic">
+            <div class="split-container">
+                <div class="split-track">
+                    <div class="split-image before">
+                        <label>Thermal IR Input</label>
+                        <input type="file" id="thermalInput" accept="image/*" />
+                        <div id="thermalPreview" class="image-preview">
+                            <p>Upload thermal image</p>
+                        </div>
+                    </div>
+                    <div class="split-image after">
+                        <label>RGB Output</label>
+                        <div id="rgbPreview" class="image-preview">
+                            <p>AI-generated RGB</p>
+                        </div>
+                    </div>
+                    <div class="split-handle">
+                        <svg viewBox="0 0 24 24" width="24" height="24">
+                            <polyline points="15 18 21 12 15 6"></polyline>
+                            <polyline points="9 18 3 12 9 6"></polyline>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <button class="btn btn-primary" id="processBtn">Process Image</button>
+            <div id="processingStatus" class="status-message"></div>
+        </div>
+    </section>
+
+    <!-- Tech Stack Section -->
+    <section class="tech-stack">
+        <h2>Technology Stack</h2>
+        <div class="tech-grid">
+            <div class="tech-item">
+                <span class="tech-name">PyTorch 2.0+</span>
+                <p>Deep learning framework</p>
+            </div>
+            <div class="tech-item">
+                <span class="tech-name">FastAPI</span>
+                <p>Modern Python backend</p>
+            </div>
+            <div class="tech-item">
+                <span class="tech-name">Rasterio</span>
+                <p>Geospatial I/O</p>
+            </div>
+            <div class="tech-item">
+                <span class="tech-name">GDAL</span>
+                <p>GIS data processing</p>
+            </div>
+            <div class="tech-item">
+                <span class="tech-name">NumPy</span>
+                <p>Numerical computing</p>
+            </div>
+            <div class="tech-item">
+                <span class="tech-name">HTML5/CSS3</span>
+                <p>Frontend design</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="team">
+        <h2>Our Team</h2>
+        <div class="team-info glassmorphic">
+            <h3>🎓 I.R.I.S. - Infrared Radiance Iterative Spectral-enhancer</h3>
+            <p>Developed for Smart India Hackathon 2026</p>
+            <p>Specialized in satellite imagery analysis, thermal-optical translation, and AI-driven geospatial solutions.</p>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="stat-card">
+            <div class="stat-number">2.0+</div>
+            <div class="stat-label">PyTorch</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-number">3.10+</div>
+            <div class="stat-label">Python</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-number">Pix2Pix</div>
+            <div class="stat-label">GAN Model</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-number">100%</div>
+            <div class="stat-label">Open Source</div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>ir2rgb</h4>
+                <p>Satellite Thermal-to-RGB Image Translation</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#demo">Demo</a></li>
+                    <li><a href="#team">Team</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="https://github.com/nishthamahato2007-lab/ir2rgb">GitHub</a></li>
+                    <li><a href="https://sih.gov.in/">Smart India Hackathon</a></li>
+                    <li><a href="https://www.usgs.gov/landsat">USGS Landsat</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 I.R.I.S. Team. MIT License. | Built with ❤️ for SIH 2026</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
