@@ -1,221 +1,1436 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ir2rgb - Satellite Thermal-to-RGB Translation</title>
-    <link rel="stylesheet" href="style.css">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        IRIS | Thermal to RGB
+    </title>
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Orbitron:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="/style.css"
+    >
+
 </head>
+
+
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="logo">
-                <span class="logo-icon">🛰️</span>
-                <span class="logo-text">ir2rgb</span>
-            </div>
-            <ul class="nav-links">
-                <li><a href="#features">Features</a></li>
-                <li><a href="#demo">Demo</a></li>
-                <li><a href="#team">Team</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1 class="hero-title">Thermal-to-RGB <span class="highlight">Image Translation</span></h1>
-            <p class="hero-subtitle">Transform Satellite Thermal Infrared Imagery into Rich RGB Scenes using Advanced AI</p>
-            <p class="hero-description">
-                Powered by Conditional GANs (Pix2Pix) • SIH 2026 Smart India Hackathon
+
+<!-- =========================================================
+     BACKGROUND
+     ========================================================= -->
+
+<div class="space-background">
+
+    <div class="stars stars-small"></div>
+
+    <div class="stars stars-medium"></div>
+
+    <div class="stars stars-large"></div>
+
+    <div class="nebula nebula-one"></div>
+
+    <div class="nebula nebula-two"></div>
+
+    <div class="nebula nebula-three"></div>
+
+    <div class="space-grid"></div>
+
+</div>
+
+
+<!-- =========================================================
+     NAVBAR
+     ========================================================= -->
+
+<nav class="navbar glass">
+
+    <div class="nav-brand">
+
+        <div class="nav-logo">
+            ◈
+        </div>
+
+        <div>
+
+            <h2>
+                IRIS
+            </h2>
+
+            <span>
+                INTELLIGENT RECONSTRUCTION IMAGING SYSTEM
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <div class="nav-links">
+
+        <a href="#mission">
+            Mission
+        </a>
+
+        <a href="#technology">
+            Technology
+        </a>
+
+        <a
+            href="#inference"
+            class="nav-launch"
+        >
+            Launch
+        </a>
+
+    </div>
+
+</nav>
+
+
+<!-- =========================================================
+     HERO
+     ========================================================= -->
+
+<section class="section hero">
+
+    <div class="hero-content">
+
+        <div class="mission-chip">
+
+            <span class="live-dot"></span>
+
+            LANDSAT AI RECONSTRUCTION
+
+        </div>
+
+
+        <h1>
+
+            Thermal Vision.
+
+            <span>
+                Reimagined.
+            </span>
+
+        </h1>
+
+
+        <p class="hero-description">
+
+            IRIS converts Landsat thermal surface-temperature
+            imagery into an AI-generated plausible RGB
+            reconstruction using a Pix2Pix-based deep learning
+            pipeline.
+
+        </p>
+
+
+        <div class="hero-actions">
+
+            <a
+                href="#inference"
+                class="primary-button"
+            >
+                Launch IRIS
+            </a>
+
+            <a
+                href="#technology"
+                class="secondary-button"
+            >
+                View Technology
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="planet-container">
+
+        <div class="planet-ring ring-one"></div>
+
+        <div class="planet-ring ring-two"></div>
+
+
+        <div class="planet">
+
+            <div class="planet-light"></div>
+
+        </div>
+
+
+        <div class="satellite">
+
+            <div class="sat-panel"></div>
+
+            <div class="sat-body"></div>
+
+            <div class="sat-panel"></div>
+
+        </div>
+
+    </div>
+
+
+    <div class="scroll-indicator">
+
+        <span>
+            SCROLL
+        </span>
+
+        <div class="scroll-line"></div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     MISSION
+     ========================================================= -->
+
+<section
+    class="section"
+    id="mission"
+>
+
+    <div class="section-heading reveal">
+
+        <span class="section-number">
+            01
+        </span>
+
+        <p class="eyebrow">
+            MISSION
+        </p>
+
+        <h2>
+            From thermal observations to visual interpretation
+        </h2>
+
+        <p class="section-description">
+
+            A single thermal band cannot uniquely recover the
+            original visible scene. IRIS therefore produces a
+            plausible RGB reconstruction learned from paired
+            Landsat observations.
+
+        </p>
+
+    </div>
+
+
+    <div class="mission-grid">
+
+        <article class="mission-card glass reveal">
+
+            <span class="card-index">
+                01
+            </span>
+
+            <h3>
+                Thermal Input
+            </h3>
+
+            <p>
+
+                Landsat Collection 2 Level-2 ST_B10 is converted
+                from digital numbers into surface temperature
+                before model inference.
+
             </p>
-            <div class="hero-buttons">
-                <a href="#demo" class="btn btn-primary">Try Demo</a>
-                <a href="https://github.com/nishthamahato2007-lab/ir2rgb" class="btn btn-secondary">View on GitHub</a>
+
+        </article>
+
+
+        <article class="mission-card glass reveal">
+
+            <span class="card-index">
+                02
+            </span>
+
+            <h3>
+                Quality Masking
+            </h3>
+
+            <p>
+
+                Optional QA_PIXEL masking removes cloud, cirrus,
+                shadow, snow and invalid pixels before selecting
+                the cleanest inference region.
+
+            </p>
+
+        </article>
+
+
+        <article class="mission-card glass reveal">
+
+            <span class="card-index">
+                03
+            </span>
+
+            <h3>
+                Validation
+            </h3>
+
+            <p>
+
+                Matching B2, B3 and B4 bands can optionally be
+                supplied to calculate L1, PSNR and SSIM against
+                visible-band ground truth.
+
+            </p>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     TECHNOLOGY
+     ========================================================= -->
+
+<section
+    class="section"
+    id="technology"
+>
+
+    <div class="tech-layout">
+
+        <div class="tech-orbit reveal">
+
+            <div class="tech-core">
+                IRIS
             </div>
+
+            <div class="tech-node node-one">
+                Landsat 9
+            </div>
+
+            <div class="tech-node node-two">
+                Pix2Pix
+            </div>
+
+            <div class="tech-node node-three">
+                PyTorch
+            </div>
+
+            <div class="tech-node node-four">
+                FastAPI
+            </div>
+
         </div>
-        <div class="hero-visual">
-            <div class="floating-card card-1">
-                <span>Thermal IR</span>
-                <div class="image-placeholder thermal"></div>
+
+
+        <div class="tech-info">
+
+            <div class="section-heading">
+
+                <span class="section-number">
+                    02
+                </span>
+
+                <p class="eyebrow">
+                    TECHNOLOGY
+                </p>
+
+                <h2>
+                    AI-powered thermal reconstruction
+                </h2>
+
             </div>
-            <div class="floating-card card-2">
-                <span>RGB Output</span>
-                <div class="image-placeholder rgb"></div>
+
+
+            <div class="tech-card glass reveal">
+
+                <span>
+                    INPUT
+                </span>
+
+                <h3>
+                    Surface Temperature
+                </h3>
+
+                <p>
+
+                    ST_B10 values are scaled into Celsius and
+                    normalized using the same preprocessing
+                    distribution used for model training.
+
+                </p>
+
             </div>
-            <div class="floating-card card-3">
-                <span>AI Powered</span>
-                <div class="ai-badge">✨ GAN</div>
+
+
+            <div class="tech-card glass reveal">
+
+                <span>
+                    MODEL
+                </span>
+
+                <h3>
+                    Conditional GAN
+                </h3>
+
+                <p>
+
+                    A Pix2Pix generator maps the selected thermal
+                    patch into a plausible RGB representation.
+
+                </p>
+
             </div>
+
+
+            <div class="tech-card glass reveal">
+
+                <span>
+                    EVALUATION
+                </span>
+
+                <h3>
+                    Quantitative Validation
+                </h3>
+
+                <p>
+
+                    When matching visible bands are supplied,
+                    reconstructed pixels are compared with the
+                    corresponding RGB target.
+
+                </p>
+
+            </div>
+
         </div>
-    </section>
 
-    <!-- Features Section -->
-    <section id="features" class="features">
-        <h2>Key Features</h2>
-        <div class="features-grid">
-            <div class="feature-card glassmorphic">
-                <div class="feature-icon">📡</div>
-                <h3>USGS Landsat Integration</h3>
-                <p>Automated radiometric calibration from raw Collection 2 Level-2 imagery to absolute Surface Temperature</p>
-            </div>
+    </div>
 
-            <div class="feature-card glassmorphic">
-                <div class="feature-icon">🗺️</div>
-                <h3>Geospatial Processing</h3>
-                <p>Native GeoTIFF support with CRS transformations and intelligent patch-based processing</p>
-            </div>
+</section>
 
-            <div class="feature-card glassmorphic">
-                <div class="feature-icon">🧠</div>
-                <h3>cGAN Architecture</h3>
-                <p>Pix2Pix conditional GAN with U-Net generator and PatchGAN discriminator for high-quality synthesis</p>
-            </div>
 
-            <div class="feature-card glassmorphic">
-                <div class="feature-icon">⚡</div>
-                <h3>Multi-Loss Optimization</h3>
-                <p>Combined adversarial, L1 reconstruction, and perceptual losses for enhanced visual quality</p>
-            </div>
+<!-- =========================================================
+     INFERENCE
+     ========================================================= -->
 
-            <div class="feature-card glassmorphic">
-                <div class="feature-icon">🎯</div>
-                <h3>Full-Scene Inference</h3>
-                <p>Sliding-window reconstruction with Gaussian blending for seamless large-scale GeoTIFF processing</p>
-            </div>
+<section
+    class="section inference-section"
+    id="inference"
+>
 
-            <div class="feature-card glassmorphic">
-                <div class="feature-icon">🎨</div>
-                <h3>Interactive Dashboard</h3>
-                <p>Glassmorphic web UI with dynamic before/after split slider for visual validation</p>
-            </div>
-        </div>
-    </section>
+    <div class="section-heading centered reveal">
 
-    <!-- Demo Section -->
-    <section id="demo" class="demo">
-        <h2>Interactive Demo</h2>
-        <div class="demo-container glassmorphic">
-            <div class="split-container">
-                <div class="split-track">
-                    <div class="split-image before">
-                        <label>Thermal IR Input</label>
-                        <input type="file" id="thermalInput" accept="image/*" />
-                        <div id="thermalPreview" class="image-preview">
-                            <p>Upload thermal image</p>
-                        </div>
-                    </div>
-                    <div class="split-image after">
-                        <label>RGB Output</label>
-                        <div id="rgbPreview" class="image-preview">
-                            <p>AI-generated RGB</p>
-                        </div>
-                    </div>
-                    <div class="split-handle">
-                        <svg viewBox="0 0 24 24" width="24" height="24">
-                            <polyline points="15 18 21 12 15 6"></polyline>
-                            <polyline points="9 18 3 12 9 6"></polyline>
-                        </svg>
-                    </div>
+        <span class="section-number">
+            03
+        </span>
+
+        <p class="eyebrow">
+            MISSION CONTROL
+        </p>
+
+        <h2>
+            Run IRIS Reconstruction
+        </h2>
+
+        <p class="section-description">
+
+            Upload Landsat ST_B10 and optionally QA_PIXEL.
+            Supply matching B2, B3 and B4 bands if you want
+            ground-truth validation.
+
+        </p>
+
+    </div>
+
+
+    <!-- =====================================================
+         MAIN INTERFACE
+         ===================================================== -->
+
+    <div class="interface-container glass reveal">
+
+
+        <!-- =================================================
+             INPUT COLUMN
+             ================================================= -->
+
+        <div class="control-panel">
+
+            <div class="panel-top">
+
+                <div>
+
+                    <span class="panel-label">
+                        THERMAL INPUT
+                    </span>
+
+                    <h3>
+                        Landsat Scene
+                    </h3>
+
                 </div>
-            </div>
-            <button class="btn btn-primary" id="processBtn">Process Image</button>
-            <div id="processingStatus" class="status-message"></div>
-        </div>
-    </section>
 
-    <!-- Tech Stack Section -->
-    <section class="tech-stack">
-        <h2>Technology Stack</h2>
-        <div class="tech-grid">
-            <div class="tech-item">
-                <span class="tech-name">PyTorch 2.0+</span>
-                <p>Deep learning framework</p>
-            </div>
-            <div class="tech-item">
-                <span class="tech-name">FastAPI</span>
-                <p>Modern Python backend</p>
-            </div>
-            <div class="tech-item">
-                <span class="tech-name">Rasterio</span>
-                <p>Geospatial I/O</p>
-            </div>
-            <div class="tech-item">
-                <span class="tech-name">GDAL</span>
-                <p>GIS data processing</p>
-            </div>
-            <div class="tech-item">
-                <span class="tech-name">NumPy</span>
-                <p>Numerical computing</p>
-            </div>
-            <div class="tech-item">
-                <span class="tech-name">HTML5/CSS3</span>
-                <p>Frontend design</p>
-            </div>
-        </div>
-    </section>
 
-    <!-- Team Section -->
-    <section id="team" class="team">
-        <h2>Our Team</h2>
-        <div class="team-info glassmorphic">
-            <h3>🎓 I.R.I.S. - Infrared Radiance Iterative Spectral-enhancer</h3>
-            <p>Developed for Smart India Hackathon 2026</p>
-            <p>Specialized in satellite imagery analysis, thermal-optical translation, and AI-driven geospatial solutions.</p>
-        </div>
-    </section>
+                <span
+                    class="channel-status"
+                    id="inputStatus"
+                >
+                    AWAITING
+                </span>
 
-    <!-- Stats Section -->
-    <section class="stats">
-        <div class="stat-card">
-            <div class="stat-number">2.0+</div>
-            <div class="stat-label">PyTorch</div>
-        </div>
-        <div class="stat-card">
-            <div class="stat-number">3.10+</div>
-            <div class="stat-label">Python</div>
-        </div>
-        <div class="stat-card">
-            <div class="stat-number">Pix2Pix</div>
-            <div class="stat-label">GAN Model</div>
-        </div>
-        <div class="stat-card">
-            <div class="stat-number">100%</div>
-            <div class="stat-label">Open Source</div>
-        </div>
-    </section>
+            </div>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h4>ir2rgb</h4>
-                <p>Satellite Thermal-to-RGB Image Translation</p>
-            </div>
-            <div class="footer-section">
-                <h4>Quick Links</h4>
-                <ul>
-                    <li><a href="#features">Features</a></li>
-                    <li><a href="#demo">Demo</a></li>
-                    <li><a href="#team">Team</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h4>Resources</h4>
-                <ul>
-                    <li><a href="https://github.com/nishthamahato2007-lab/ir2rgb">GitHub</a></li>
-                    <li><a href="https://sih.gov.in/">Smart India Hackathon</a></li>
-                    <li><a href="https://www.usgs.gov/landsat">USGS Landsat</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 I.R.I.S. Team. MIT License. | Built with ❤️ for SIH 2026</p>
-        </div>
-    </footer>
 
-    <script src="script.js"></script>
+            <!-- =============================================
+                 B10 + QA
+                 ============================================= -->
+
+            <div class="dual-upload-grid">
+
+
+                <label
+                    class="upload-zone compact-upload"
+                    id="b10UploadZone"
+                    for="b10Input"
+                >
+
+                    <input
+                        type="file"
+                        id="b10Input"
+                        accept=".tif,.tiff,image/tiff"
+                    >
+
+                    <div class="upload-symbol">
+                        B10
+                    </div>
+
+                    <strong>
+                        ST_B10
+                    </strong>
+
+                    <p id="b10FileLabel">
+                        Required • .TIF / .TIFF
+                    </p>
+
+                </label>
+
+
+                <label
+                    class="upload-zone compact-upload optional-upload"
+                    id="qaUploadZone"
+                    for="qaInput"
+                >
+
+                    <input
+                        type="file"
+                        id="qaInput"
+                        accept=".tif,.tiff,image/tiff"
+                    >
+
+                    <div class="upload-symbol">
+                        QA
+                    </div>
+
+                    <strong>
+                        QA_PIXEL
+                    </strong>
+
+                    <p id="qaFileLabel">
+                        Optional • recommended
+                    </p>
+
+                </label>
+
+            </div>
+
+
+            <div class="quality-note">
+
+                <span>
+                    QUALITY MASK
+                </span>
+
+                QA_PIXEL removes fill, cloud, cirrus,
+                cloud-shadow and snow pixels before inference.
+
+            </div>
+
+
+            <!-- =============================================
+                 VALIDATION BANDS
+                 ============================================= -->
+
+            <div class="quality-note validation-intro">
+
+                <span>
+                    OPTIONAL VALIDATION
+                </span>
+
+                Upload matching Landsat SR_B2, SR_B3 and SR_B4
+                together to calculate L1, PSNR and SSIM.
+
+            </div>
+
+
+            <div class="validation-upload-grid">
+
+
+                <label
+                    class="upload-zone compact-upload optional-upload"
+                    id="b2UploadZone"
+                    for="b2Input"
+                >
+
+                    <input
+                        id="b2Input"
+                        type="file"
+                        accept=".tif,.tiff,image/tiff"
+                    >
+
+                    <div class="upload-symbol">
+                        B2
+                    </div>
+
+                    <strong>
+                        Blue
+                    </strong>
+
+                    <p id="b2FileLabel">
+                        Optional • SR_B2
+                    </p>
+
+                </label>
+
+
+                <label
+                    class="upload-zone compact-upload optional-upload"
+                    id="b3UploadZone"
+                    for="b3Input"
+                >
+
+                    <input
+                        id="b3Input"
+                        type="file"
+                        accept=".tif,.tiff,image/tiff"
+                    >
+
+                    <div class="upload-symbol">
+                        B3
+                    </div>
+
+                    <strong>
+                        Green
+                    </strong>
+
+                    <p id="b3FileLabel">
+                        Optional • SR_B3
+                    </p>
+
+                </label>
+
+
+                <label
+                    class="upload-zone compact-upload optional-upload"
+                    id="b4UploadZone"
+                    for="b4Input"
+                >
+
+                    <input
+                        id="b4Input"
+                        type="file"
+                        accept=".tif,.tiff,image/tiff"
+                    >
+
+                    <div class="upload-symbol">
+                        B4
+                    </div>
+
+                    <strong>
+                        Red
+                    </strong>
+
+                    <p id="b4FileLabel">
+                        Optional • SR_B4
+                    </p>
+
+                </label>
+
+            </div>
+
+
+            <!-- =============================================
+                 THERMAL PREVIEW
+                 ============================================= -->
+
+            <div class="preview-frame scene-preview-frame">
+
+                <img
+                    id="inputPreview"
+                    alt="Thermal scene preview"
+                >
+
+                <div
+                    class="preview-placeholder"
+                    id="inputPlaceholder"
+                >
+
+                    <span>
+                        THERMAL PREVIEW
+                    </span>
+
+                    <p>
+                        Scene preview appears after inference
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- =============================================
+                 BUTTONS
+                 ============================================= -->
+
+            <div class="interface-actions">
+
+                <button
+                    type="button"
+                    class="primary-button action-button"
+                    id="generateBtn"
+                    disabled
+                >
+                    Generate RGB
+                </button>
+
+
+                <button
+                    type="button"
+                    class="secondary-button action-button"
+                    id="clearBtn"
+                >
+                    Reset
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             TRANSFER
+             ================================================= -->
+
+        <div class="transfer-column">
+
+            <span>
+                PIX2PIX TRANSFER
+            </span>
+
+            <div class="transfer-line">
+
+                <div class="energy-pulse"></div>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             OUTPUT
+             ================================================= -->
+
+        <div class="control-panel">
+
+            <div class="panel-top">
+
+                <div>
+
+                    <span class="panel-label">
+                        GENERATED OUTPUT
+                    </span>
+
+                    <h3>
+                        RGB Reconstruction
+                    </h3>
+
+                </div>
+
+
+                <span
+                    class="channel-status"
+                    id="inferStatus"
+                >
+                    IDLE
+                </span>
+
+            </div>
+
+
+            <div class="preview-frame">
+
+                <img
+                    id="outputPreview"
+                    alt="Generated RGB"
+                >
+
+                <div
+                    class="preview-placeholder"
+                    id="outputPlaceholder"
+                >
+
+                    <span>
+                        RGB OUTPUT
+                    </span>
+
+                    <p id="outputStatus">
+                        Standby
+                    </p>
+
+                </div>
+
+
+                <div
+                    class="scan-overlay"
+                    id="scanOverlay"
+                ></div>
+
+            </div>
+
+
+            <!-- =============================================
+                 PATCH
+                 ============================================= -->
+
+            <div class="patch-preview-card">
+
+                <div class="patch-preview-head">
+
+                    <div>
+
+                        <span class="mini-label">
+                            SELECTED REGION
+                        </span>
+
+                        <strong>
+                            256 × 256 Thermal Patch
+                        </strong>
+
+                    </div>
+
+
+                    <span
+                        class="mask-badge"
+                        id="maskBadge"
+                    >
+                        QA UNKNOWN
+                    </span>
+
+                </div>
+
+
+                <div class="patch-preview-box">
+
+                    <img
+                        id="patchPreview"
+                        alt="Selected thermal patch"
+                    >
+
+                    <div
+                        class="patch-placeholder"
+                        id="patchPlaceholder"
+                    >
+                        Selected model input appears here
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="output-info">
+
+                <div>
+
+                    <span>
+                        INPUT FILE
+                    </span>
+
+                    <strong id="fileName">
+                        —
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        MODEL
+                    </span>
+
+                    <strong>
+                        baseline_v1.pth
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         WARNING
+         ===================================================== -->
+
+    <div
+        class="warning-banner"
+        id="warningBanner"
+    ></div>
+
+
+    <!-- =====================================================
+         TELEMETRY
+         ===================================================== -->
+
+    <div class="metrics-panel glass reveal">
+
+        <div class="metrics-header">
+
+            <div>
+
+                <span class="panel-label">
+                    SCENE TELEMETRY
+                </span>
+
+                <h3>
+                    Processing Metrics
+                </h3>
+
+            </div>
+
+
+            <span
+                class="channel-status"
+                id="metricsStatus"
+            >
+                NO DATA
+            </span>
+
+        </div>
+
+
+        <div class="metrics-grid">
+
+            <div class="metric-card">
+                <span>
+                    SCENE SIZE
+                </span>
+                <strong id="metricSceneSize">
+                    —
+                </strong>
+            </div>
+
+
+            <div class="metric-card">
+                <span>
+                    SCENE VALID
+                </span>
+                <strong id="metricSceneValid">
+                    —
+                </strong>
+            </div>
+
+
+            <div class="metric-card">
+                <span>
+                    PATCH VALID
+                </span>
+                <strong id="metricPatchValid">
+                    —
+                </strong>
+            </div>
+
+
+            <div class="metric-card">
+                <span>
+                    QA MASK
+                </span>
+                <strong id="metricCloudMask">
+                    —
+                </strong>
+            </div>
+
+
+            <div class="metric-card">
+                <span>
+                    MIN TEMP
+                </span>
+                <strong id="metricMinTemp">
+                    —
+                </strong>
+            </div>
+
+
+            <div class="metric-card">
+                <span>
+                    MEAN TEMP
+                </span>
+                <strong id="metricMeanTemp">
+                    —
+                </strong>
+            </div>
+
+
+            <div class="metric-card">
+                <span>
+                    MAX TEMP
+                </span>
+                <strong id="metricMaxTemp">
+                    —
+                </strong>
+            </div>
+
+
+            <div class="metric-card">
+                <span>
+                    PROCESSING TIME
+                </span>
+                <strong id="metricTime">
+                    —
+                </strong>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         DIAGNOSTICS
+         ===================================================== -->
+
+    <div class="diagnostics-panel glass reveal">
+
+        <div class="diagnostics-header">
+
+            <div>
+
+                <span class="panel-label">
+                    THERMAL ANALYSIS
+                </span>
+
+                <h3>
+                    Scene Diagnostics
+                </h3>
+
+                <p class="diagnostics-description">
+
+                    Thermal characteristics derived from valid
+                    Landsat ST_B10 surface-temperature pixels.
+
+                </p>
+
+            </div>
+
+
+            <span
+                class="channel-status"
+                id="diagnosticsStatus"
+            >
+                AWAITING ANALYSIS
+            </span>
+
+        </div>
+
+
+        <div class="diagnostics-grid">
+
+            <div class="diagnostic-card">
+
+                <span class="diagnostic-label">
+                    SCENE CHARACTER
+                </span>
+
+                <strong
+                    class="diagnostic-value"
+                    id="diagSceneCharacter"
+                >
+                    —
+                </strong>
+
+            </div>
+
+
+            <div class="diagnostic-card">
+
+                <span class="diagnostic-label">
+                    THERMAL CONDITION
+                </span>
+
+                <strong
+                    class="diagnostic-value"
+                    id="diagThermalCondition"
+                >
+                    —
+                </strong>
+
+            </div>
+
+
+            <div class="diagnostic-card">
+
+                <span class="diagnostic-label">
+                    THERMAL VARIABILITY
+                </span>
+
+                <strong
+                    class="diagnostic-value"
+                    id="diagThermalStd"
+                >
+                    —
+                </strong>
+
+            </div>
+
+
+            <div class="diagnostic-card">
+
+                <span class="diagnostic-label">
+                    HOT SURFACE ≥ 40°C
+                </span>
+
+                <strong
+                    class="diagnostic-value"
+                    id="diagHotSurface"
+                >
+                    —
+                </strong>
+
+            </div>
+
+
+            <div class="diagnostic-card">
+
+                <span class="diagnostic-label">
+                    COOL SURFACE ≤ 20°C
+                </span>
+
+                <strong
+                    class="diagnostic-value"
+                    id="diagCoolSurface"
+                >
+                    —
+                </strong>
+
+            </div>
+
+
+            <div class="diagnostic-card">
+
+                <span class="diagnostic-label">
+                    INVALID / MASKED
+                </span>
+
+                <strong
+                    class="diagnostic-value"
+                    id="diagCloud"
+                >
+                    —
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <div class="selected-region-diagnostic">
+
+            <span class="diagnostic-label">
+                SELECTED MODEL REGION
+            </span>
+
+            <strong id="diagPatch">
+                —
+            </strong>
+
+        </div>
+
+
+        <div class="scene-interpretation">
+
+            <div class="interpretation-heading">
+
+                <div class="interpretation-icon">
+                    ◈
+                </div>
+
+                <div>
+
+                    <span class="mini-label">
+                        IRIS ANALYSIS
+                    </span>
+
+                    <h4>
+                        Thermal Interpretation
+                    </h4>
+
+                </div>
+
+            </div>
+
+
+            <p id="diagInterpretation">
+
+                Scene interpretation will appear
+                after reconstruction.
+
+            </p>
+
+
+            <p class="diagnostic-disclaimer">
+
+                Thermal characteristics do not uniquely identify
+                land-cover classes. Visible and multispectral
+                information is required for reliable semantic
+                land-cover identification.
+
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         VALIDATION
+         ===================================================== -->
+
+    <div class="metrics-panel glass reveal">
+
+        <div class="metrics-header">
+
+            <div>
+
+                <span class="panel-label">
+                    RECONSTRUCTION VALIDATION
+                </span>
+
+                <h3>
+                    Ground Truth Comparison
+                </h3>
+
+                <p class="validation-description">
+
+                    Quantitative reconstruction metrics are
+                    available when matching SR_B2, SR_B3 and
+                    SR_B4 files are supplied.
+
+                </p>
+
+            </div>
+
+
+            <span
+                class="channel-status"
+                id="validationStatus"
+            >
+                NOT AVAILABLE
+            </span>
+
+        </div>
+
+
+        <div class="validation-metrics-grid">
+
+            <div class="metric-card">
+
+                <span>
+                    L1 ERROR
+                </span>
+
+                <strong id="metricValidationL1">
+                    —
+                </strong>
+
+            </div>
+
+
+            <div class="metric-card">
+
+                <span>
+                    PSNR
+                </span>
+
+                <strong id="metricValidationPSNR">
+                    —
+                </strong>
+
+            </div>
+
+
+            <div class="metric-card">
+
+                <span>
+                    SSIM
+                </span>
+
+                <strong id="metricValidationSSIM">
+                    —
+                </strong>
+
+            </div>
+
+
+            <div class="metric-card">
+
+                <span>
+                    VALID PIXELS
+                </span>
+
+                <strong id="metricValidationValid">
+                    —
+                </strong>
+
+            </div>
+
+
+            <div class="metric-card confidence-card">
+
+                <span>
+                    CONFIDENCE
+                </span>
+
+                <strong id="metricConfidence">
+                    —
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <div
+            class="quality-note"
+            id="validationMessage"
+        >
+
+            <span>
+                INFO
+            </span>
+
+            Upload matching B2 + B3 + B4 together to enable
+            quantitative validation.
+
+        </div>
+
+
+        <div
+            class="confidence-message"
+            id="confidenceDescription"
+        >
+
+            <span>
+                CONFIDENCE
+            </span>
+
+            <p>
+                Awaiting reconstruction.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         SYSTEM LOG
+         ===================================================== -->
+
+    <div class="mission-log glass reveal">
+
+        <div class="log-header">
+
+            <span>
+                IRIS SYSTEM LOG
+            </span>
+
+            <span class="log-live">
+                ● ONLINE
+            </span>
+
+        </div>
+
+
+        <div id="logBox">
+
+            <p>
+                &gt; IRIS initialized.
+            </p>
+
+            <p>
+                &gt; Awaiting Landsat ST_B10 imagery.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     FOOTER
+     ========================================================= -->
+
+<footer>
+
+    <div>
+        IRIS
+    </div>
+
+    <p>
+        AI-assisted Landsat Thermal-to-RGB Reconstruction
+    </p>
+
+</footer>
+
+
+<script src="/script.js"></script>
+
 </body>
+
 </html>
